@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.automattic.alfred.calypso</string>
+	<string>com.piszek.github-pr-ninja</string>
 	<key>category</key>
-	<string>Automattic</string>
+	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>6C68D0BB-A89A-4FDD-BB99-B5A5B460646E</key>
@@ -41,11 +41,11 @@
 	<key>createdby</key>
 	<string>Artur Piszek</string>
 	<key>description</key>
-	<string>Calypso Workflows</string>
+	<string></string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Calypso</string>
+	<string>PR Ninja</string>
 	<key>objects</key>
 	<array>
 		<dict>
