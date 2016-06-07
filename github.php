@@ -1,7 +1,11 @@
 <?php
 
+
+//Change to repo / branch you're working on
 $branch = "Automattic/wp-calypso";
 
+
+//Change contents of this function to cd to your project dir and checkout your branch. I have a setup in TMUX that Im happy with
 function checkoutBranch( $branch ) {
     system( '/usr/local/bin/tmux has-session -t calypso || /usr/local/bin/tmux new-session -d -s calypso' );
     sleep( 1 );
@@ -11,6 +15,8 @@ function checkoutBranch( $branch ) {
     sleep( 1 );
     system( '/usr/local/bin/tmux send -t calypso ENTER' );
 }
+
+//No need to customize beyond this point
 
 function curl( $url ) {
     $ch=curl_init();
