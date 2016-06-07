@@ -7,3 +7,7 @@ Search, checkout and see PRs from your Alfred
 - [ALT] Checkout and build
 - [SHIFT] Open PR
 - [CMD] Copy PR link 
+
+## Download
+
+[./PR Ninja.alfredworkflow](./PR Ninja.alfredworkflow)
