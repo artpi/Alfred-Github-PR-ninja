@@ -6,3 +6,8 @@ Search, checkout and see PRs from your Alfred
 - Press SHIFT in hovered item to see a preview of PR
 - Press COMMAND+ENTER to copy PR link to clipboard and paste it to active window
 - Press OPTION+ENTER to run a custom checkout process, in my case its running checkout and build in ‘calypso’ TMUX session
+
+## Download
+
+- You can checkout this repo to folder in your `~/Library/Application Support/Alfred 2/Alfred.alfredpreferences/workflows/`
+- OR You can download workflow here: [./PR Ninja.alfredworkflow](./PR Ninja.alfredworkflow)
