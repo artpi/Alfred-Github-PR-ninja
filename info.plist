@@ -34,9 +34,28 @@
 				<key>modifiersubtext</key>
 				<string>Press COMMAND to check out the branch</string>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>F7B37795-6522-4F20-8303-6863C3420DCF</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string>Test the branch in calypso.live</string>
+			</dict>
 		</array>
 		<key>C06B7259-1445-4BDB-8658-D980757D4252</key>
 		<array/>
+		<key>F7B37795-6522-4F20-8303-6863C3420DCF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B9548A02-D7CE-45E3-905C-037F1375CE68</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Artur Piszek</string>
@@ -62,6 +81,21 @@
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
 			<string>B2BA81B6-67F1-45CD-805C-B5D45DAC8B3A</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>FB9FB785-4890-42F5-A20A-059BCD1186CD</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -105,21 +139,6 @@ search( str_replace( ' ', '+', "{query}" ) );
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>FB9FB785-4890-42F5-A20A-059BCD1186CD</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -139,6 +158,46 @@ checkoutBranch( $branch );
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>38</integer>
+				<key>script</key>
+				<string>open "https://calypso.live/?branch={query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.script</string>
+			<key>uid</key>
+			<string>B9548A02-D7CE-45E3-905C-037F1375CE68</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>require "./github.php";
+$branch = getBranch( "{query}" );
+echo $branch;</string>
+				<key>type</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F7B37795-6522-4F20-8303-6863C3420DCF</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -154,10 +213,20 @@ checkoutBranch( $branch );
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
+		<key>B9548A02-D7CE-45E3-905C-037F1375CE68</key>
+		<dict>
+			<key>ypos</key>
+			<real>290</real>
+		</dict>
 		<key>C06B7259-1445-4BDB-8658-D980757D4252</key>
 		<dict>
 			<key>ypos</key>
 			<real>170</real>
+		</dict>
+		<key>F7B37795-6522-4F20-8303-6863C3420DCF</key>
+		<dict>
+			<key>ypos</key>
+			<real>290</real>
 		</dict>
 		<key>FB9FB785-4890-42F5-A20A-059BCD1186CD</key>
 		<dict>
